@@ -1306,11 +1306,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1837534518}
+  - component: {fileID: 1837534523}
   - component: {fileID: 1837534520}
   - component: {fileID: 1837534519}
   - component: {fileID: 1837534521}
   - component: {fileID: 1837534522}
-  - component: {fileID: 1837534523}
   m_Layer: 0
   m_Name: Barry
   m_TagString: Player
