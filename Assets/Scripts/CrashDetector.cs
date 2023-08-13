@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CrashDetector : MonoBehaviour
 {
-    [SerializeField] float reloadSceneDelay = 0.3f;
+    [SerializeField] float reloadSceneDelay = 0.5f;
     [SerializeField] ParticleSystem crashEffect;
     [SerializeField] AudioClip crashSFX;
 
@@ -13,6 +13,7 @@ public class CrashDetector : MonoBehaviour
     {
         if (collision.tag == "Ground")
         {
+            FindObjectOfType<PlayerController>().DisableControls();
             crashEffect.Play();
             GetComponent<AudioSource>().PlayOneShot(crashSFX);
             Invoke("ReloadScene", reloadSceneDelay);
